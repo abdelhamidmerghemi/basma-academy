@@ -1,0 +1,81 @@
+# ==========================================
+# Basma Academy — Monorepo .gitignore
+# ==========================================
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+*.ipr
+*.iws
+
+# ------------------------------------------
+# Mobile (Flutter)
+# ------------------------------------------
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.pub-cache/
+mobile/.pub/
+mobile/build/
+mobile/coverage/
+mobile/.packages
+
+# Flutter Android
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/captures/
+mobile/android/gradle-app.setting
+mobile/android/app/debug/
+mobile/android/app/profile/
+mobile/android/app/release/
+
+# Flutter iOS & macOS
+mobile/ios/.symlinks/
+mobile/ios/Pods/
+mobile/ios/Flutter/.last_build_id
+mobile/macos/Pods/
+mobile/macos/Flutter/ephemeral/
+
+# ------------------------------------------
+# Backend (Laravel & Node)
+# ------------------------------------------
+backend/vendor/
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-error.log*
+
+# Backend Environment & Secrets
+backend/.env
+backend/.env.backup
+backend/.env.production
+backend/auth.json
+backend/storage/*.key
+backend/storage/pail/
+
+# Backend Build & Runtime Caches
+backend/public/build/
+backend/public/hot/
+backend/public/storage
+backend/storage/logs/*.log
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+!backend/storage/framework/cache/data/.gitignore
+!backend/storage/framework/sessions/.gitignore
+!backend/storage/framework/views/.gitignore
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+backend/_ide_helper.php

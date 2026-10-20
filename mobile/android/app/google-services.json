@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044258859953",
+    "project_id": "basma-academy-7e41d",
+    "storage_bucket": "basma-academy-7e41d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044258859953:android:398eddfce427e51e10eb90",
+        "android_client_info": {
+          "package_name": "com.basmaacademy.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBweQwMjhlQDImQl6uvqk7Zj6uN5rnI_r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

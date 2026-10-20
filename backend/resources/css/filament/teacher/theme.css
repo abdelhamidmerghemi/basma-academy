@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-cairo: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-outfit: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body,
+.fi-body {
+    font-family: var(--font-cairo) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Latin Numbers, Badges, and Brand Headers */
+.font-outfit,
+.fi-badge,
+.fi-sidebar-header,
+.fi-logo,
+.fi-wi-stats-overview-stat-value,
+.teacher-badge-rating {
+    font-family: var(--font-outfit), var(--font-cairo) !important;
+}
+
+/* -------------------------------------------------------------
+ * 1. SIDEBAR STYLING (LIGHT & DARK DUAL MODE COMPATIBLE)
+ * ------------------------------------------------------------- */
+.fi-sidebar-item-button {
+    border-radius: 0.85rem !important;
+    transition: all 0.2s ease !important;
+    margin-block: 0.15rem !important;
+    font-weight: 600 !important;
+}
+
+/* Inactive Sidebar Text Color in Light Mode */
+.fi-sidebar-item-button .fi-sidebar-item-label,
+.fi-sidebar-item-button span,
+.fi-sidebar-item-button svg {
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+.fi-sidebar-item-button:hover {
+    background: rgba(37, 99, 235, 0.08) !important;
+}
+
+/* Active Sidebar Navigation Item */
+.fi-sidebar-item-active .fi-sidebar-item-button {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item-label,
+.fi-sidebar-item-active .fi-sidebar-item-button span,
+.fi-sidebar-item-active .fi-sidebar-item-button svg {
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+.fi-sidebar-group-label {
+    color: #64748b !important;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+}
+
+/* Dark Mode Sidebar Item Colors */
+.dark .fi-sidebar-item-button .fi-sidebar-item-label,
+.dark .fi-sidebar-item-button span,
+.dark .fi-sidebar-item-button svg {
+    color: #cbd5e1 !important;
+}
+
+.dark .fi-sidebar-group-label {
+    color: #94a3b8 !important;
+}
+
+/* Hide desktop topbar logo since sidebar has brand logo */
+@media (min-width: 1024px) {
+    .fi-topbar .fi-logo {
+        display: none !important;
+    }
+}
+
+/* -------------------------------------------------------------
+ * 2. TEACHER WELCOME HERO CARD (DYNAMIC LIGHT & DARK MODE)
+ * ------------------------------------------------------------- */
+/* Light Mode Welcome Card */
+.teacher-welcome-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 1.25rem !important;
+    padding: 1.75rem 2rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.teacher-welcome-card h2 {
+    color: #0f172a !important;
+}
+
+.teacher-welcome-card p {
+    color: #475569 !important;
+}
+
+.teacher-avatar-box {
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 9999px !important;
+    object-fit: cover;
+    border: 2px solid rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.teacher-avatar-placeholder {
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 9999px !important;
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+    color: #ffffff !important;
+    padding: 0.7rem 1.35rem !important;
+    border-radius: 0.85rem !important;
+    font-weight: 800 !important;
+    font-size: 0.875rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.3) !important;
+    border: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.teacher-btn-primary:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45) !important;
+}
+
+.teacher-btn-secondary {
+    background: #f1f5f9 !important;
+    color: #1e293b !important;
+    padding: 0.7rem 1.35rem !important;
+    border-radius: 0.85rem !important;
+    font-weight: 800 !important;
+    font-size: 0.875rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    border: 1px solid #cbd5e1 !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.teacher-btn-secondary:hover {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+    transform: translateY(-2px) scale(1.02) !important;
+}
+
+.teacher-badge-rating {
+    background: rgba(245, 158, 11, 0.12) !important;
+    color: #d97706 !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 9999px !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+}
+
+/* Dark Mode Overrides for Welcome Hero Card */
+.dark .teacher-welcome-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.4) !important;
+}
+
+.dark .teacher-welcome-card h2 {
+    color: #ffffff !important;
+}
+
+.dark .teacher-welcome-card p {
+    color: #cbd5e1 !important;
+}
+
+.dark .teacher-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .teacher-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .teacher-badge-rating {
+    background: rgba(245, 158, 11, 0.2) !important;
+    color: #fbbf24 !important;
+}
+
+/* -------------------------------------------------------------
+ * 3. STAT CARDS & FORM CARDS (DUAL MODE ENHANCEMENTS)
+ * ------------------------------------------------------------- */
+.fi-wi-stats-overview-stat,
+.fi-section,
+.fi-ta-content {
+    border-radius: 1.25rem !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.fi-wi-stats-overview-stat-value {
+    font-size: 2.1rem !important;
+    font-weight: 800 !important;
+}
+
+.fi-wi-stats-overview-stat-label {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+.fi-input-wrp {
+    border-radius: 0.85rem !important;
+    transition: all 0.25s ease !important;
+}
+
+/* -------------------------------------------------------------
+ * 4. 📈 RICH CHART WIDGET STYLING
+ * ------------------------------------------------------------- */
+.fi-wi-chart {
+    border-radius: 1.25rem !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+.fi-wi-chart:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.dark .fi-wi-chart {
+    background: rgba(15, 23, 42, 0.88) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* -------------------------------------------------------------
+ * 5. 🌐 LOGIN LANGUAGE SWITCHER (LIGHT & DARK DUAL MODE)
+ * ------------------------------------------------------------- */
+.lang-switcher-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    padding: 0.35rem !important;
+    border-radius: 0.85rem !important;
+    margin-bottom: 1.5rem !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.dark .lang-switcher-box {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.lang-switch-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    padding: 0.45rem 0.9rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    border-radius: 0.65rem !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: transparent !important;
+    color: #64748b !important;
+    text-decoration: none !important;
+}
+
+.lang-switch-btn:hover {
+    color: #0f172a !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark .lang-switch-btn {
+    color: #94a3b8 !important;
+}
+
+.dark .lang-switch-btn:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Active Selected Language Pill */
+.lang-switch-btn.active {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+}
+
+.dark .lang-switch-btn.active {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.5) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
